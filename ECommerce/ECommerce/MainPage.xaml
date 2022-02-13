@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ECommerce.MainPage"
+             BackgroundColor="#212F3D">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="250" MinimumHeightRequest="250" BackgroundColor="Transparent">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="50" MinimumHeightRequest="50" Orientation="Horizontal" BackgroundColor="Transparent" Padding="10,10,10,10">
+                <ImageButton Padding="5,5,10,5" Source="bback" BorderColor="White" BorderWidth="1" CornerRadius="10" HeightRequest="45" MinimumHeightRequest="80" WidthRequest="60" MinimumWidthRequest="60" Margin="0,0,0,0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                <Label Text="E-Commerce" TextColor="White" HeightRequest="45" MinimumHeightRequest="80" WidthRequest="60" MinimumWidthRequest="60" Margin="0,0,0,0" TextTransform="None" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <ImageButton Padding="5,5,10,5"  Source="basket" BorderColor="White" BorderWidth="1" CornerRadius="10" HeightRequest="45" MinimumHeightRequest="80" WidthRequest="60" MinimumWidthRequest="60" Margin="0,0,0,0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="10,0,10,0">
+                <CarouselView x:Name="CarouselViews">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="WhiteSmoke" HasShadow="True" HeightRequest="250" CornerRadius="20" VerticalOptions="CenterAndExpand" Padding="0,0,0,0">
+                                    <Image Source="{Binding Image}" Margin="0,0,0,0" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </StackLayout>
+        </StackLayout>
+        <Label Text="Categories" TextColor="White" Margin="10,0,0,0"/>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" x:Name="CategoryLayout" Orientation="Horizontal" Padding="10,5,10,5" Margin="0,-5,0,0">
+
+            </StackLayout>
+        </ScrollView>
+        <Label Text="Products" TextColor="White" Margin="10,0,0,0"/>
+        <ScrollView Orientation="Vertical">
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="0,-6,0,0" x:Name="ProductLayout" Orientation="Vertical" Padding="10,10,10,10">
+            
+        </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
